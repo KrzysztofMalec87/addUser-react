@@ -2,10 +2,15 @@ import React from 'react';
 
 class Form extends React.Component {
 
-  
+  submitFn = ( event ) => {
+    event.preventDefault();
+
+    event.target.reset();  
+  }
+
   render(){
     return (
-      <form>
+      <form autoComplete="off" onSubmit={this.submitFn}>
         <div className="row">
           <div className="col">
             <input type="text" className="form-control" />
