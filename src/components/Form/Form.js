@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class Form extends React.Component {
+class Form extends Component {
 
-  submitFn = ( event ) => {
+  handleSubmitForm =  event  => {
     event.preventDefault();
 
     event.target.reset();  
@@ -10,19 +10,19 @@ class Form extends React.Component {
 
   render(){
     return (
-      <form autoComplete="off" onSubmit={this.submitFn}>
+      <form autoComplete="off" onSubmit={this.handleSubmitForm}>
         <div className="row">
           <div className="col">
-            <input type="text" className="form-control" />
+            <input className="form-control" type="text" />
           </div>
           <div className="col">
-            <input type="text" className="form-control" />
+            <input className="form-control" type="text" />
           </div>
           <div className="col">
-            <input type="text" className="form-control" />
+            <input className="form-control" type="text" />
           </div>
           <div className="col">
-            <input type="text" className="form-control" />
+            <input className="form-control" type="text" />
           </div>
           <div className="col">
             <button className="btn btn-info w-100">Add</button>
