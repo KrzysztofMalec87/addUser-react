@@ -16,7 +16,7 @@ const ListItem = ({id, name, surname, location, age}) => (
       {age}
     </td>
     <td className="list-wraper__table-cell list-wraper__table-cell--remove">
-      <button className="btn btn-danger btn-sm ist-wraper__remove-button" dataRowRemove={id}>X</button>
+      <button className="btn btn-danger btn-sm list-wraper__remove-button" dataRowRemove={id}>X</button>
     </td>
   </tr>
  );
