@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Form extends Component {
 
-  handleSubmitForm =  event  => {
+  handleSubmitForm = event => {
     event.preventDefault();
 
     event.target.reset();  
