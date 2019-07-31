@@ -1,7 +1,7 @@
 import React from 'react';
 import ListItem from './ListItem/ListItem';
 
-const ListWrapper = ({items}) => {
+const ListWrapper = ({ items }) => {
   const { header, users } = items;
 
   return (
@@ -13,8 +13,8 @@ const ListWrapper = ({items}) => {
           return (
             <ListItem key={id} {...item} />
           )
-         }
-        )}
+        }
+      )}
       </thead>
       <tbody>
       {users.map(item => {
@@ -23,8 +23,8 @@ const ListWrapper = ({items}) => {
           return (
             <ListItem key={id} {...item} />
           )
-         }
-        )}
+        }
+      )}
       </tbody>
     </table>
   );
