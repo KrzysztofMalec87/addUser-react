@@ -8,16 +8,16 @@ class App extends Component {
     items: UserData(),
   };
 
-  
+
   changeState = newState => {
     this.setState({
       items: newState
     })
   }
-  
-  
-  render(){
-    const {items} = this.state;
+
+
+  render() {
+    const { items } = this.state;
 
     return (
       <div className="container">

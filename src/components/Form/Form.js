@@ -1,43 +1,43 @@
 import React, { Component } from 'react';
 
 class Form extends Component {
-  
-submitForm = event => {
-  event.preventDefault();
 
-  const {
-    header,
-    users
-  } = this.props.state;
-  const form = event.target;
-  const formInputName = form.name.value;
-  const formInputSurname = form.surname.value;
-  const formInputLocation = form.location.value;
-  const formInputAge = form.age.value;
-  const randomId = Math.floor(Math.random() * 10000);
+  submitForm = event => {
+    event.preventDefault();
 
-  const newState = {
-    header: [...header],
-    users: [
-      ...users,
-      {
-        id: `${randomId}`,
-        name: `${formInputName}`,
-        surname: `${formInputSurname}`,
-        location: `${formInputLocation}`,
-        age: `${formInputAge}`
-      }
-    ]
-  };
+    const {
+      header,
+      users
+    } = this.props.state;
+    const form = event.target;
+    const formInputName = form.name.value;
+    const formInputSurname = form.surname.value;
+    const formInputLocation = form.location.value;
+    const formInputAge = form.age.value;
+    const randomId = Math.floor(Math.random() * 10000);
 
-
-  this.props.changeState(newState);
-
-  form.reset();
-}
+    const newState = {
+      header: [...header],
+      users: [
+        ...users,
+        {
+          id: `${randomId}`,
+          name: `${formInputName}`,
+          surname: `${formInputSurname}`,
+          location: `${formInputLocation}`,
+          age: `${formInputAge}`
+        }
+      ]
+    };
 
 
-  render(){
+    this.props.changeState(newState);
+
+    form.reset();
+  }
+
+
+  render() {
     return (
       <form autoComplete="off" onSubmit={this.submitForm}>
         <div className="row">

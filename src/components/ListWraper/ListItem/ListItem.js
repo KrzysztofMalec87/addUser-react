@@ -3,30 +3,30 @@ import React, { Component } from 'react';
 
 class ListItem extends Component {
 
-  findindexKey = ( array, id ) => array.findIndex( object => object.id === id );
-  
+  findindexKey = (array, id) => array.findIndex(object => object.id === id);
+
   removeRow = () => {
     const {
       id,
       state
     } = this.props;
 
-    delete state.users[ this.findindexKey(state.users, id) ];
+    delete state.users[this.findindexKey(state.users, id)];
 
-    state.users = state.users.filter(function(){return true;});
+    state.users = state.users.filter(function () { return true; });
 
     this.props.changeState(state);
   }
-  
-  render(){
+
+  render() {
     const {
       name,
       surname,
       location,
       age
     } = this.props;
-    
-    
+
+
     return (
       <tr className="list-wraper__table-row">
         <td className="list-wraper__table-cell">
