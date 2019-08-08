@@ -4,7 +4,7 @@ import ListItem from './ListItem/ListItem';
 class ListWrapper extends Component {
 
   render() {
-    const { header, users } = this.props.items;
+    const { items: { header, users } } = this.props;
 
     return (
       <table className="table table-striped table-bordered list-wraper">
