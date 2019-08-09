@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 
 class Form extends Component {
-
   submitForm = event => {
     event.preventDefault();
 
-    const {
-      header,
-      users
-    } = this.props.state;
+    const { header, users } = this.props.state;
     const form = event.target;
     const formInputName = form.name.value;
     const formInputSurname = form.surname.value;
@@ -25,30 +21,46 @@ class Form extends Component {
           name: `${formInputName}`,
           surname: `${formInputSurname}`,
           location: `${formInputLocation}`,
-          age: `${formInputAge}`
-        }
-      ]
+          age: `${formInputAge}`,
+        },
+      ],
     };
-
 
     this.props.changeState(newState);
 
     form.reset();
-  }
-
+  };
 
   render() {
     return (
       <form autoComplete="off" onSubmit={this.submitForm}>
         <div className="row">
           <div className="col">
-            <input className="form-control" minLength="3" name="name" required type="text" />
+            <input
+              className="form-control"
+              minLength="3"
+              name="name"
+              required
+              type="text"
+            />
           </div>
           <div className="col">
-            <input className="form-control" minLength="3" name="surname" required type="text" />
+            <input
+              className="form-control"
+              minLength="3"
+              name="surname"
+              required
+              type="text"
+            />
           </div>
           <div className="col">
-            <input className="form-control" minLength="3" name="location" required type="text" />
+            <input
+              className="form-control"
+              minLength="3"
+              name="location"
+              required
+              type="text"
+            />
           </div>
           <div className="col">
             <input className="form-control" name="age" required type="number" />

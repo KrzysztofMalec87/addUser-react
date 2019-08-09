@@ -8,13 +8,11 @@ class App extends Component {
     items: UserData(),
   };
 
-
   changeState = newState => {
     this.setState({
-      items: newState
-    })
-  }
-
+      items: newState,
+    });
+  };
 
   render() {
     const { items } = this.state;

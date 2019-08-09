@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import ListItem from './ListItem/ListItem';
 
 class ListWrapper extends Component {
-
   render() {
-    const { items: { header, users } } = this.props;
+    const {
+      items: { header, users },
+    } = this.props;
 
     return (
       <table className="table table-striped table-bordered list-wraper">
@@ -12,26 +13,26 @@ class ListWrapper extends Component {
           {header.map(item => {
             const { id } = item;
 
-            return (
-              <ListItem key={id} {...item} />
-            )
-          }
-          )}
+            return <ListItem key={id} {...item} />;
+          })}
         </thead>
         <tbody>
           {users.map(item => {
             const { id } = item;
 
             return (
-              <ListItem key={id} {...item} state={this.props.items} changeState={this.props.changeState} />
-            )
-          }
-          )}
+              <ListItem
+                key={id}
+                {...item}
+                state={this.props.items}
+                changeState={this.props.changeState}
+              />
+            );
+          })}
         </tbody>
       </table>
     );
   }
-};
-
+}
 
 export default ListWrapper;
