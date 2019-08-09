@@ -6,10 +6,7 @@ class ListItem extends Component {
   findindexKey = (array, id) => array.findIndex(object => object.id === id);
 
   removeRow = () => {
-    const {
-      id,
-      state
-    } = this.props;
+    const { id, state } = this.props;
 
     delete state.users[this.findindexKey(state.users, id)];
 
@@ -19,12 +16,7 @@ class ListItem extends Component {
   }
 
   render() {
-    const {
-      name,
-      surname,
-      location,
-      age
-    } = this.props;
+    const { name, surname, location, age } = this.props;
 
 
     return (
