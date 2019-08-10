@@ -1,0 +1,34 @@
+{
+  "header": [
+    {
+      "id": "table-header",
+      "name": "Name",
+      "surname": "Surname",
+      "location": "Location",
+      "age": "Age"
+    }
+  ],
+  "users": [
+    {
+      "id": "1689",
+      "name": "Jan",
+      "surname": "Kowalski",
+      "location": "Wroc\u0142aw, Polska",
+      "age": "21"
+    },
+    {
+      "id": "1622",
+      "name": "Marcin",
+      "surname": "Kowalski",
+      "location": "Wroc\u0142aw, Polska",
+      "age": "33"
+    },
+    {
+      "id": "1389",
+      "name": "Krzysztof",
+      "surname": "Konieczny",
+      "location": "Wroc\u0142aw, Polska",
+      "age": "33"
+    }
+  ]
+}
